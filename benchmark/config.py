@@ -79,7 +79,7 @@ apps["svm"] = App(OptiML, "SVM", "/data/ml/svm/MATRIX.TRAIN.100 /data/ml/svm/MAT
 apps["naivebayes"] = App(OptiML, "NaiveBayes", "/data/ml/nb/MATRIX.TRAIN.RANDOM.250K /data/ml/nb/MATRIX.TEST", configs,
   runner_class="NBCompiler")
 apps["query1"] = App(OptiQL, "Query1", "/data/query/SF1", configs)
-apps["pagerank"] = App(OptiGraph, "PageRank", "/data/graph/soc-LiveJournal1.txt /data/graph/prout.txt", configs)
+apps["pagerank"] = App(OptiGraph, "PageRank", "/data/graph/soc-LiveJournal1.txt /data/graph/prout.txt 25", configs)
 apps["undirectedtrianglecounting"] = App(OptiGraph, "UndirectedTriangleCounting", "/data/graph/soc-LiveJournal1.txt", configs)
 
 
