@@ -20,7 +20,7 @@ def main():
   l = numpy.random.rand(args.n, args.n)
   l = numpy.minimum(l, l.T)
 
-  with open("a.dat") as f:
+  with open("a.dat", "w") as f:
     for i in range(args.n):
       for j in range(args.n):
         if(l[i, j] <= args.d):
@@ -28,7 +28,7 @@ def main():
 
   y0 = numpy.random.randn(args.n)
 
-  with open("y0.dat") as f:
+  with open("y0.dat", "w") as f:
     for i in range(args.n):
       print("%f" % y0[i], file=f)
 
