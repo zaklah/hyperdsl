@@ -18,7 +18,7 @@ def main():
   u = numpy.dot(u, u.T)
 
   l = numpy.random.rand(args.n, args.n)
-  l = numpy.minumum(l, l.T)
+  l = numpy.minimum(l, l.T)
 
   with open("a.dat") as f:
     for i in range(args.n):
