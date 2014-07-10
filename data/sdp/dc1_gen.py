@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 from __future__ import print_function, division
 
+import numpy
+import numpy.random
 import argparse
 
 def main():
@@ -12,10 +14,10 @@ def main():
 
   # generate problem matrix by first generating a PSD matrix, then discarding some number of
   # the entries so that the matrix is sparse
-  u = numpy.randn(args.n, args.n)
+  u = numpy.random.randn(args.n, args.n)
   u = numpy.dot(u, u.T)
 
-  l = numpy.rand(args.n, args.n)
+  l = numpy.random.rand(args.n, args.n)
   l = numpy.minumum(l, l.T)
 
   with open("a.dat") as f:
@@ -24,7 +26,7 @@ def main():
         if(l[i, j] <= args.d):
           print("%d %d %f" % (i+1, j+1, u[i,j]), file=f)
 
-  y0 = numpy.randn(args.n)
+  y0 = numpy.random.randn(args.n)
 
   with open("y0.dat") as f:
     for i in range(args.n):
