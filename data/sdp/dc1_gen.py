@@ -17,9 +17,6 @@ def main():
   # the entries so that the matrix is sparse
   u = numpy.random.randn(args.n, args.m)
 
-  l = numpy.random.rand(args.n, args.n)
-  l = numpy.minimum(l, l.T)
-
   with open("a.dat", "w") as f:
     for i in range(args.n):
       for j in range(args.n):
