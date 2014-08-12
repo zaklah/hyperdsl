@@ -103,7 +103,7 @@ def stage(runner, params, opts):
     #os.putenv("JAVA_OPTS", java_opts)
 
     #MKL ENV
-    os.putenv("LD_PRELOAD", delitecommon.JAVA_HOME + "/jre/lib/amd64/libjsig.so")
+    # os.putenv("LD_PRELOAD", delitecommon.JAVA_HOME + "/jre/lib/amd64/libjsig.so")
     
     if opts.verbose:
        delitecommon.printEnv()

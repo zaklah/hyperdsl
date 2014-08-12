@@ -28,7 +28,7 @@ class App(object):
     self.delitec_options = delitec_options
 
   def stage_command(self):
-    return "bin/delitec -v --cpp %s %s" % (self.delitec_options, self.runner_class)
+    return "bin/delitec -v --nb --cpp %s %s" % (self.delitec_options, self.runner_class)
 
   def run_command(self, c, runs, verbose):
     if(c.run_only_once):
@@ -66,7 +66,7 @@ dsls = [OptiML, OptiQL ,OptiGraph, Delite]
 
 configs = [ 
   Config.smp(1), Config.smp(2), Config.smp(4), Config.smp(8),
-  Config.cpp(1), Config.cpp(2), Config.cpp(4), Config.cpp(8)
+  Config.smp(16), Config.smp(32), Config.smp(64)
 ]
 
 apps = {}
